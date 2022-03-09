@@ -8,3 +8,4 @@ School blackjack code. Doesn't work as well in CoCalc, as `os.system("clear")` d
 - Banking system for recurring users
 - Daily playing money rewards
 - Aces based on user input
+- Terminal clearing for no multiplayer cheating
