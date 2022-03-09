@@ -1,8 +1,10 @@
 import json
+from secrets import randbelow
 from datetime import date
 from random import shuffle, randint
 from itertools import product
 from os import system
+from customization import RANKS, SUITS
 
 
 def get_input(prompt, *args):
@@ -71,7 +73,7 @@ class Deck:
     def draw(self):
         if len(self.deck) == 26:
             self.shuffle()
-        return self.deck.pop(0)
+        return self.deck.pop(randbelow(len(self.deck)))
 
 
 class Player:
@@ -309,9 +311,6 @@ class Blackjack:
 
 
 if __name__ == "__main__":
-    RANKS = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
-             'Ten', 'Jack', 'Queen', 'King', 'Ace')
-    SUITS = ('♣', '♦', '♥', '♠')
     VALUES = (2,  3,  4,  5,  6,  7,  8,  9,  10,  10,  10,  10,  11)
     RANK_VALUES = dict(zip(RANKS, VALUES))
     ANSI_COLORS = {"Red": "91", "Green": "92"}
