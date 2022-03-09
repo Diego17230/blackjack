@@ -1,5 +1,5 @@
 # Blackjack
-***REMOVED*** blackjack code. Doesn't work as well in CoCalc, as `os.system("clear")` doesn't do anything.
+School blackjack code. Doesn't work as well in CoCalc, as `os.system("clear")` doesn't do anything.
 
 ### Extra features
 - Colors
